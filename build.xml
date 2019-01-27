@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<project name="discotek-sinktank" default="build" basedir=".">
+    
+    <target name="init">
+
+        <property file="${basedir}/build.properties"/>
+        	
+        <echo message="Building ${product-vendor} ${product-name} ${product-version}"/>
+
+    
+        <property name="src"     value="${basedir}/src"/>
+        <property name="asm-src" value="${basedir}/asm-7.0-src"/>
+        <property name="jasper-src" value="${basedir}/jasper-src"/>
+        <property name="cfg"     value="${basedir}/cfg"/>
+        <property name="resources"     value="${basedir}/resources"/>
+        <property name="build"   value="${basedir}/build"/>
+        <property name="dist"    value="${basedir}/dist"/>
+        <property name="javadocs"    value="${dist}/javadocs"/>
+        <property name="lib"     value="${basedir}/lib"/>
+    	<property name="javahelp"   value="${basedir}/javahelp"/>
+        <property name="classes" value="${build}/classes"/>
+    	<property name="jar" value="discotek.sinktank-${product-version}.jar"/>
+    	<property name="warfile" value="discotek.sinktank-${product-version}.war" />
+    	<property name="earfile" value="discotek.sinktank-${product-version}.ear" />
+    	<property name="license-dir" value="${basedir}/license"/>
+    	
+        <path id="compile-classpath">
+            <fileset dir="${lib}"></fileset>
+        </path>
+    	
+        <mkdir dir="${build}" />        
+        <mkdir dir="${dist}"/>
+             
+    </target>
+
+    
+    <target name="build" depends="init,jar,javadocs"/>
+
+    <target name="compile"
+        depends="init"
+        description="compile the source">
+
+        <mkdir dir="${classes}" />
+
+        <javac 
+        	destdir="${classes}" 
+        	verbose="false" 
+        	debug="yes" 
+        	deprecation="true" 
+        	fork="true" 
+        	source="1.7"
+    	    target="1.7"
+        	memorymaximumsize="800m">
+              <src path="${src}" />
+              <src path="${asm-src}" />
+              <src path="${jasper-src}" />
+              <classpath refid="compile-classpath"/>
+        </javac>
+    	
+    </target>
+
+    <target name="jar" depends="compile">
+
+        <echo file="${build}/sinktank.properties" append="false" message="vendor-name=${product-vendor}${line.separator}" />
+        <echo file="${build}/sinktank.properties" append="true"  message="product-name=${product-name}${line.separator}" />
+        <echo file="${build}/sinktank.properties" append="true"  message="product-version=${product-version}${line.separator}" />
+    	
+        <jar destfile="${dist}/${jar}" update="true" >
+            <manifest>
+              <attribute name="Main-Class" value="ca.discotek.sinktank.gui.MainView"/>
+            </manifest>
+        	
+            <fileset dir="${build}" includes="sinktank.properties"/>
+            <fileset dir="${resources}/config" includes="**"/>
+            <fileset dir="${resources}/static" includes="**"/>
+        	
+        	<fileset dir="${classes}"/>
+
+        	<zipfileset src="${lib}/ant.jar"/>
+        	<zipfileset src="${lib}/cfr_0_132.jar"/>
+            <zipfileset src="${lib}/ecj-4.6.3.jar"/>
+            <zipfileset src="${lib}/el-api.jar"/>
+            <zipfileset src="${lib}/jasper-el.jar"/>
+            <zipfileset src="${lib}/jasper.jar"/>
+            <zipfileset src="${lib}/jsp-api.jar"/>
+            <zipfileset src="${lib}/servlet-api.jar"/>
+            <zipfileset src="${lib}/tomcat-api.jar"/>
+            <zipfileset src="${lib}/tomcat-juli.jar"/>
+            <zipfileset src="${lib}/tomcat-util-scan.jar"/>
+            <zipfileset src="${lib}/tomcat-util.jar"/>
+   
+            <zipfileset src="${lib}/trove-3.1a1.jar"/>
+
+       	    <fileset dir="${license-dir}"/>
+        	
+    	</jar>
+    </target>
+
+	<target name="javadocs" depends="init">
+		
+		<echo message="${src}"/>
+		
+		<javadoc packagenames="ca.discotek.*"
+		         sourcepath="${src}"
+		         defaultexcludes="yes"
+		         destdir="${javadocs}"
+		         author="true"
+		         version="true"
+		         use="true"
+		         windowtitle="Sink Tank">
+		  <doctitle><![CDATA[<h1>Sink Tank</h1>]]></doctitle>
+		  <link href="https://docs.oracle.com/javase/8/docs/api/"/>
+		</javadoc>
+		
+	</target>
+
+    <target name="clean" depends="init" >
+        <delete dir="${build}"/>
+        <delete dir="${dist}"/>
+    	<delete dir="${classes}"/>
+    </target>
+
+	
+</project>
+
+

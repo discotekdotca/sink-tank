@@ -1,0 +1,3 @@
+<annotations>
+    <annotation>org.springframework.web.bind.annotation.SessionAttribute</annotation>
+</annotations>

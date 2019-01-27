@@ -1,0 +1,42 @@
+<sources>
+
+    <method owner="javax.servlet.ServletRequest" name="getInputStream">
+        <return-type>javax.servlet.ServletInputStream</return-type>
+    </method>
+
+    <method owner="javax.servlet.ServletRequest" name="getParameter">
+        <parameter-type>java.lang.String</parameter-type>
+        <return-type>java.lang.String</return-type>
+    </method>
+    
+    <method owner="javax.servlet.ServletRequest" name="getParameterMap">
+        <return-type>java.util.Map</return-type>
+    </method>
+
+    <method owner="javax.servlet.http.HttpServletRequest" name="getCookies">
+        <return-type>javax.servlet.http.Cookie[]</return-type>
+    </method>
+    
+    <method owner="javax.servlet.http.HttpServletRequest" name="getHeader">
+        <parameter-type>java.lang.String</parameter-type>
+        <return-type>java.lang.String</return-type>
+    </method>
+    
+    <method owner="javax.servlet.http.HttpServletRequest" name="getHeaders">
+        <parameter-type>java.lang.String</parameter-type>
+        <return-type>java.util.Enumeration</return-type>
+    </method>
+    
+
+    <method owner="java.io.Serializable" name="readObject">
+        <parameter-type>java.io.ObjectInputStream</parameter-type>
+        <return-type>void</return-type>
+    </method>
+
+    <method owner="java.io.Externalizable" name="readExternal">
+        <parameter-type>java.io.ObjectInput</parameter-type>
+        <return-type>void</return-type>
+    </method>
+<!--
+-->
+</sources>

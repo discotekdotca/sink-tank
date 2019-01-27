@@ -1,0 +1,12 @@
+<annotations>
+    <annotation>org.springframework.web.bind.annotation.RequestHeader</annotation>
+    <annotation>org.springframework.web.bind.annotation.RequestParam</annotation>
+    <annotation>org.springframework.web.bind.annotation.RequestPart</annotation>
+
+    <annotation>org.springframework.web.bind.annotation.ModelAttribute</annotation>
+    
+    <annotation>javax.ws.rs.PathParam</annotation>
+    <annotation>javax.ws.rs.QueryParam</annotation>
+    <annotation>javax.ws.rs.FormParam</annotation>
+
+</annotations>

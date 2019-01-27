@@ -1,0 +1,849 @@
+<sinks>
+
+    <method owner="java.sql.Statement" name="addBatch">
+        <parameter-type>java.lang.String</parameter-type>
+        <return-type>void</return-type>
+        <vulnerable-parameter-index>0</vulnerable-parameter-index>
+    </method>
+    
+    <method owner="java.sql.Statement" name="execute">
+        <parameter-type>java.lang.String</parameter-type>
+        <return-type>boolean</return-type>
+        <vulnerable-parameter-index>0</vulnerable-parameter-index>
+    </method>
+    
+    <method owner="java.sql.Statement" name="execute">
+        <parameter-type>java.lang.String</parameter-type>
+        <parameter-type>int</parameter-type>
+        <return-type>boolean</return-type>
+        <vulnerable-parameter-index>0</vulnerable-parameter-index>
+    </method>
+    
+    <method owner="java.sql.Statement" name="execute">
+        <parameter-type>java.lang.String</parameter-type>
+        <parameter-type>int[]</parameter-type>
+        <return-type>boolean</return-type>
+        <vulnerable-parameter-index>0</vulnerable-parameter-index>
+    </method>
+    
+    <method owner="java.sql.Statement" name="execute">
+        <parameter-type>java.lang.String</parameter-type>
+        <parameter-type>java.lang.String[]</parameter-type>
+        <return-type>boolean</return-type>
+        <vulnerable-parameter-index>0</vulnerable-parameter-index>
+    </method>
+
+    <method owner="java.sql.Statement" name="executeQuery">
+        <parameter-type>java.lang.String</parameter-type>
+        <return-type>java.sql.ResultSet</return-type>
+        <vulnerable-parameter-index>0</vulnerable-parameter-index>
+    </method>
+
+    <method owner="java.sql.Statement" name="executeUpdate">
+        <parameter-type>java.lang.String</parameter-type>
+        <return-type>int</return-type>
+        <vulnerable-parameter-index>0</vulnerable-parameter-index>
+    </method>
+    
+    <method owner="java.sql.Statement" name="executeUpdate">
+        <parameter-type>java.lang.String</parameter-type>
+        <parameter-type>int</parameter-type>
+        <return-type>int</return-type>
+        <vulnerable-parameter-index>0</vulnerable-parameter-index>
+    </method>
+    
+    <method owner="java.sql.Statement" name="executeUpdate">
+        <parameter-type>java.lang.String</parameter-type>
+        <parameter-type>int[]</parameter-type>
+        <return-type>int</return-type>
+        <vulnerable-parameter-index>0</vulnerable-parameter-index>
+    </method>
+    
+    <method owner="java.sql.Statement" name="executeUpdate">
+        <parameter-type>java.lang.String</parameter-type>
+        <parameter-type>java.lang.String[]</parameter-type>
+        <return-type>int</return-type>
+        <vulnerable-parameter-index>0</vulnerable-parameter-index>
+    </method>
+    
+    <method owner="java.lang.ClassLoader" name="defineClass">
+        <parameter-type>byte[]</parameter-type>
+        <parameter-type>int</parameter-type>
+        <parameter-type>int</parameter-type>
+        <return-type>java.lang.Class</return-type>
+        <vulnerable-parameter-index>0</vulnerable-parameter-index>
+    </method>
+    
+    <method owner="java.lang.ClassLoader" name="defineClass">
+        <parameter-type>java.lang.String</parameter-type>
+        <parameter-type>byte[]</parameter-type>
+        <parameter-type>int</parameter-type>
+        <parameter-type>int</parameter-type>
+        <return-type>java.lang.Class</return-type>
+        <vulnerable-parameter-index>1</vulnerable-parameter-index>
+    </method>
+    
+    <method owner="java.lang.ClassLoader" name="defineClass">
+        <parameter-type>java.lang.String</parameter-type>
+        <parameter-type>byte[]</parameter-type>
+        <parameter-type>int</parameter-type>
+        <parameter-type>int</parameter-type>
+        <parameter-type>java.security.ProtectionDomain</parameter-type>
+        <return-type>java.lang.Class</return-type>
+        <vulnerable-parameter-index>1</vulnerable-parameter-index>
+    </method>
+    
+    <method owner="java.lang.ClassLoader" name="defineClass">
+        <parameter-type>java.lang.String</parameter-type>
+        <parameter-type>java.nio.ByteBuffer</parameter-type>
+        <parameter-type>java.security.ProtectionDomain</parameter-type>
+        <return-type>java.lang.Class</return-type>
+        <vulnerable-parameter-index>1</vulnerable-parameter-index>
+    </method>
+
+    <method owner="java.lang.reflect.Method" name="invoke">
+        <parameter-type>java.lang.Object</parameter-type>
+        <parameter-type>java.lang.Object[]</parameter-type>
+        <return-type>java.lang.Object</return-type>
+        <vulnerable-parameter-index>1</vulnerable-parameter-index>
+    </method>
+
+<!--    
+    <method owner="java.lang.Class" name="forName">
+        <parameter-type>java.lang.String</parameter-type>
+        <return-type>java.lang.Class</return-type>
+        <vulnerable-parameter-index>0</vulnerable-parameter-index>
+    </method>
+    
+    <method owner="java.lang.Class" name="forName">
+        <parameter-type>java.lang.String</parameter-type>
+        <parameter-type>boolean</parameter-type>
+        <parameter-type>java.lang.ClassLoader</parameter-type>
+        <return-type>java.lang.Class</return-type>
+        <vulnerable-parameter-index>0</vulnerable-parameter-index>
+    </method>
+    
+    <method owner="java.lang.Class" name="getDeclaredField">
+        <parameter-type>java.lang.String</parameter-type>
+        <return-type>java.lang.reflect.Field</return-type>
+        <vulnerable-parameter-index>0</vulnerable-parameter-index>
+    </method>
+    
+    <method owner="java.lang.Class" name="getDeclaredMethod">
+        <parameter-type>java.lang.reflect.Method</parameter-type>
+        <parameter-type>java.lang.String</parameter-type>
+        <parameter-type>java.lang.Class[]</parameter-type>
+        <return-type>java.lang.reflect.Method</return-type>
+        <vulnerable-parameter-index>1</vulnerable-parameter-index>
+    </method>
+    
+    <method owner="java.lang.Class" name="getField">
+        <parameter-type>java.lang.String</parameter-type>
+        <return-type>java.lang.reflect.Field</return-type>
+        <vulnerable-parameter-index>0</vulnerable-parameter-index>
+    </method>
+    
+    <method owner="java.lang.Class" name="getMethod">
+        <parameter-type>java.lang.reflect.Method</parameter-type>
+        <parameter-type>java.lang.String</parameter-type>
+        <parameter-type>java.lang.Class[]</parameter-type>
+        <return-type>java.lang.reflect.Method</return-type>
+        <vulnerable-parameter-index>1</vulnerable-parameter-index>
+    </method>
+-->
+    
+    <method owner="java.lang.Runtime" name="exec">
+        <parameter-type>java.lang.String</parameter-type>
+        <return-type>java.lang.Process</return-type>
+        <vulnerable-parameter-index>0</vulnerable-parameter-index>
+    </method>
+    
+    <method owner="java.lang.Runtime" name="exec">
+        <parameter-type>java.lang.String[]</parameter-type>
+        <return-type>java.lang.Process</return-type>
+        <vulnerable-parameter-index>0</vulnerable-parameter-index>
+    </method>
+    
+    <method owner="java.lang.Runtime" name="exec">
+        <parameter-type>java.lang.String[]</parameter-type>
+        <parameter-type>java.lang.String[]</parameter-type>
+        <return-type>java.lang.Process</return-type>
+        <vulnerable-parameter-index>0</vulnerable-parameter-index>
+    </method>
+    
+    <method owner="java.lang.Runtime" name="exec">
+        <parameter-type>java.lang.String[]</parameter-type>
+        <parameter-type>java.lang.String[]</parameter-type>
+        <parameter-type>java.io.File</parameter-type>
+        <return-type>java.lang.Process</return-type>
+        <vulnerable-parameter-index>0</vulnerable-parameter-index>
+    </method>
+    
+    <method owner="java.lang.Runtime" name="exec">
+        <parameter-type>java.lang.String</parameter-type>
+        <parameter-type>java.lang.String[]</parameter-type>
+        <return-type>java.lang.Process</return-type>
+        <vulnerable-parameter-index>0</vulnerable-parameter-index>
+    </method>
+    
+    <method owner="java.lang.Runtime" name="exec">
+        <parameter-type>java.lang.String</parameter-type>
+        <parameter-type>java.lang.String[]</parameter-type>
+        <parameter-type>java.io.File</parameter-type>
+        <return-type>java.lang.Process</return-type>
+        <vulnerable-parameter-index>0</vulnerable-parameter-index>
+    </method>
+
+    <method owner="java.lang.Runtime" name="load">
+        <parameter-type>java.lang.String</parameter-type>
+        <return-type>void</return-type>
+        <vulnerable-parameter-index>0</vulnerable-parameter-index>
+    </method>
+    
+    <method owner="java.lang.Runtime" name="loadLibrary">
+        <parameter-type>java.lang.String</parameter-type>
+        <return-type>void</return-type>
+        <vulnerable-parameter-index>0</vulnerable-parameter-index>
+    </method>
+    
+    <method owner="javax.servlet.jsp.JspWriter" name="print">
+        <parameter-type>char</parameter-type>
+        <return-type>void</return-type>
+        <vulnerable-parameter-index>0</vulnerable-parameter-index>
+    </method>
+    
+    <method owner="javax.servlet.jsp.JspWriter" name="print">
+        <parameter-type>char[]</parameter-type>
+        <return-type>void</return-type>
+        <vulnerable-parameter-index>0</vulnerable-parameter-index>
+    </method>
+    
+    <method owner="javax.servlet.jsp.JspWriter" name="print">
+        <parameter-type>java.lang.Object</parameter-type>
+        <return-type>void</return-type>
+        <vulnerable-parameter-index>0</vulnerable-parameter-index>
+    </method>
+    
+    <method owner="javax.servlet.jsp.JspWriter" name="print">
+        <parameter-type>java.lang.String</parameter-type>
+        <return-type>void</return-type>
+        <vulnerable-parameter-index>0</vulnerable-parameter-index>
+    </method>
+    
+    <method owner="javax.servlet.jsp.JspWriter" name="println">
+        <parameter-type>char</parameter-type>
+        <return-type>void</return-type>
+        <vulnerable-parameter-index>0</vulnerable-parameter-index>
+    </method>
+    
+    <method owner="javax.servlet.jsp.JspWriter" name="println">
+        <parameter-type>char[]</parameter-type>
+        <return-type>void</return-type>
+        <vulnerable-parameter-index>0</vulnerable-parameter-index>
+    </method>
+    
+    <method owner="javax.servlet.jsp.JspWriter" name="println">
+        <parameter-type>java.lang.Object</parameter-type>
+        <return-type>void</return-type>
+        <vulnerable-parameter-index>0</vulnerable-parameter-index>
+    </method>
+    
+    <method owner="javax.servlet.jsp.JspWriter" name="println">
+        <parameter-type>java.lang.String</parameter-type>
+        <return-type>void</return-type>
+        <vulnerable-parameter-index>0</vulnerable-parameter-index>
+    </method>
+
+    <method owner="java.io.Writer" name="append">
+        <parameter-type>char</parameter-type>
+        <return-type>java.io.Writer</return-type>
+        <vulnerable-parameter-index>0</vulnerable-parameter-index>
+    </method>
+    
+    <method owner="java.io.Writer" name="append">
+        <parameter-type>java.lang.CharSequence</parameter-type>
+        <return-type>java.io.Writer</return-type>
+        <vulnerable-parameter-index>0</vulnerable-parameter-index>
+    </method>
+    
+    <method owner="java.io.Writer" name="append">
+        <parameter-type>java.lang.CharSequence</parameter-type>
+        <parameter-type>int</parameter-type>
+        <parameter-type>int</parameter-type>
+        <return-type>java.io.Writer</return-type>
+        <vulnerable-parameter-index>0</vulnerable-parameter-index>
+    </method>
+    
+    
+    <method owner="java.io.Writer" name="write">
+        <parameter-type>char[]</parameter-type>
+        <return-type>void</return-type>
+        <vulnerable-parameter-index>0</vulnerable-parameter-index>
+    </method>
+    
+    <method owner="java.io.Writer" name="write">
+        <parameter-type>char[]</parameter-type>
+        <parameter-type>int</parameter-type>
+        <parameter-type>int</parameter-type>
+        <return-type>void</return-type>
+        <vulnerable-parameter-index>0</vulnerable-parameter-index>
+    </method>
+    
+    <method owner="java.io.Writer" name="write">
+        <parameter-type>int</parameter-type>
+        <return-type>void</return-type>
+        <vulnerable-parameter-index>0</vulnerable-parameter-index>
+    </method>
+    
+    <method owner="java.io.Writer" name="write">
+        <parameter-type>java.lang.String</parameter-type>
+        <return-type>void</return-type>
+        <vulnerable-parameter-index>0</vulnerable-parameter-index>
+    </method>
+    
+    <method owner="java.io.Writer" name="write">
+        <parameter-type>java.lang.String</parameter-type>
+        <parameter-type>int</parameter-type>
+        <parameter-type>int</parameter-type>
+        <return-type>void</return-type>
+        <vulnerable-parameter-index>0</vulnerable-parameter-index>
+    </method>
+    
+
+    <method owner="java.lang.System" name="setProperty">
+        <parameter-type>java.lang.String</parameter-type>
+        <parameter-type>java.lang.String</parameter-type>
+        <return-type>java.lang.String</return-type>
+        <vulnerable-parameter-index>1</vulnerable-parameter-index>
+    </method>    
+    
+    <method owner="java.lang.System" name="setProperties">
+        <parameter-type>java.util.Properties</parameter-type>
+        <return-type>void</return-type>
+        <vulnerable-parameter-index>0</vulnerable-parameter-index>
+    </method>   
+    
+    <method owner="org.apache.jasper.runtime.PageContextImpl" name="proprietaryEvaluate">
+        <parameter-type>java.lang.String</parameter-type>
+        <parameter-type>java.lang.Class</parameter-type>
+        <parameter-type>javax.servlet.jsp.PageContext</parameter-type>
+        <parameter-type>org.apache.jasper.runtime.ProtectedFunctionMapper</parameter-type>
+        <return-type>java.lang.Object</return-type>
+        <vulnerable-parameter-index>0</vulnerable-parameter-index>
+    </method>  
+
+    <method owner="org.apache.commons.el.parser.ELParser" constructor="true">
+        <parameter-type>java.io.Stream</parameter-type>
+        <return-type>void</return-type>
+        <vulnerable-parameter-index>0</vulnerable-parameter-index>
+    </method> 
+    
+    <method owner="org.apache.commons.el.parser.ELParser" constructor="true">
+        <parameter-type>java.io.Reader</parameter-type>
+        <return-type>void</return-type>
+        <vulnerable-parameter-index>0</vulnerable-parameter-index>
+    </method> 
+    
+    <method owner="org.apache.commons.el.parser.ELParser" constructor="true">
+        <parameter-type>org.apache.commons.el.parser.ELParserTokenManager</parameter-type>
+        <return-type>void</return-type>
+        <vulnerable-parameter-index>0</vulnerable-parameter-index>
+    </method> 
+    
+    <method owner="org.apache.commons.jexl3.JexlEngine.JexlEngine" name="createExpression">
+        <parameter-type>java.lang.String</parameter-type>
+        <return-type>org.apache.commons.jexl3.JexlExpression</return-type>
+        <vulnerable-parameter-index>0</vulnerable-parameter-index>
+    </method> 
+
+    <method owner="org.apache.commons.jexl3.JexlEngine.JexlEngine" name="createScript">
+        <parameter-type>java.lang.String</parameter-type>
+        <return-type>org.apache.commons.jexl3.JexlScript</return-type>
+        <vulnerable-parameter-index>0</vulnerable-parameter-index>
+    </method> 
+    
+    <method owner="org.apache.commons.jexl3.JexlEngine.JexlEngine" name="createScript">
+        <parameter-type>java.lang.String</parameter-type>
+        <parameter-type>java.lang.String[]</parameter-type>
+        <return-type>org.apache.commons.jexl3.JexlScript</return-type>
+        <vulnerable-parameter-index>0</vulnerable-parameter-index>
+    </method> 
+
+    <method owner="org.apache.commons.jexl3.JexlEngine.JexlEngine" name="createScript">
+        <parameter-type>java.net.URL</parameter-type>
+        <return-type>org.apache.commons.jexl3.JexlScript</return-type>
+        <vulnerable-parameter-index>0</vulnerable-parameter-index>
+    </method> 
+    
+    <method owner="org.apache.commons.jexl3.JexlEngine.JexlEngine" name="createScript">
+        <parameter-type>java.net.URL</parameter-type>
+        <parameter-type>java.lang.String[]</parameter-type>
+        <return-type>org.apache.commons.jexl3.JexlScript</return-type>
+        <vulnerable-parameter-index>0</vulnerable-parameter-index>
+    </method> 
+    
+    
+    <method owner="org.apache.commons.ognl.Ognl" name="getValue">
+        <parameter-type>java.lang.String</parameter-type>
+        <parameter-type>java.util.Map</parameter-type>
+        <parameter-type>java.lang.Object</parameter-type>
+        <return-type>java.lang.Object</return-type>
+        <vulnerable-parameter-index>0</vulnerable-parameter-index>
+    </method>     
+    
+    <method owner="org.apache.commons.ognl.Ognl" name="getValue">
+        <parameter-type>java.lang.String</parameter-type>
+        <parameter-type>java.util.Map</parameter-type>
+        <parameter-type>java.lang.Object</parameter-type>
+        <parameter-type>java.lang.Class</parameter-type>
+        <return-type>java.lang.Object</return-type>
+        <vulnerable-parameter-index>0</vulnerable-parameter-index>
+    </method>
+
+    <method owner="org.apache.commons.ognl.Ognl" name="getValue">
+        <parameter-type>java.lang.String</parameter-type>
+        <parameter-type>java.lang.Object</parameter-type>
+        <return-type>java.lang.Object</return-type>
+        <vulnerable-parameter-index>0</vulnerable-parameter-index>
+    </method>    
+
+    <method owner="org.apache.commons.ognl.Ognl" name="getValue">
+        <parameter-type>java.lang.String</parameter-type>
+        <parameter-type>java.lang.Object</parameter-type>
+        <parameter-type>java.lang.Class</parameter-type>
+        <return-type>java.lang.Object</return-type>
+        <vulnerable-parameter-index>0</vulnerable-parameter-index>
+    </method>    
+
+
+    <method owner="ognl.Ognl" name="getValue">
+        <parameter-type>java.lang.String</parameter-type>
+        <parameter-type>java.util.Map</parameter-type>
+        <parameter-type>java.lang.Object</parameter-type>
+        <return-type>java.lang.Object</return-type>
+        <vulnerable-parameter-index>0</vulnerable-parameter-index>
+    </method>     
+    
+    <method owner="ognl.Ognl" name="getValue">
+        <parameter-type>java.lang.String</parameter-type>
+        <parameter-type>java.util.Map</parameter-type>
+        <parameter-type>java.lang.Object</parameter-type>
+        <parameter-type>java.lang.Class</parameter-type>
+        <return-type>java.lang.Object</return-type>
+        <vulnerable-parameter-index>0</vulnerable-parameter-index>
+    </method>
+
+    <method owner="ognl.Ognl" name="getValue">
+        <parameter-type>java.lang.String</parameter-type>
+        <parameter-type>java.lang.Object</parameter-type>
+        <return-type>java.lang.Object</return-type>
+        <vulnerable-parameter-index>0</vulnerable-parameter-index>
+    </method>    
+
+    <method owner="ognl.Ognl" name="getValue">
+        <parameter-type>java.lang.String</parameter-type>
+        <parameter-type>java.lang.Object</parameter-type>
+        <parameter-type>java.lang.Class</parameter-type>
+        <return-type>java.lang.Object</return-type>
+        <vulnerable-parameter-index>0</vulnerable-parameter-index>
+    </method>
+    
+    <method owner="ognl.Ognl" name="translateVariables">
+        <parameter-type>char[]</parameter-type>
+        <parameter-type>java.lang.String</parameter-type>
+        <parameter-type>com.opensymphony.xwork2.util.ValueStack</parameter-type>
+        <parameter-type>java.lang.Class</parameter-type>
+        <parameter-type>com.opensymphony.xwork2.util.TextParseUtil$ParsedValueEvaluator</parameter-type>
+        <parameter-type>int</parameter-type>
+        <return-type>java.lang.Object</return-type>
+        <vulnerable-parameter-index>1</vulnerable-parameter-index>
+    </method>
+
+    <method owner="ognl.Ognl" name="translateVariablesCollection">
+        <parameter-type>char[]</parameter-type>
+        <parameter-type>java.lang.String</parameter-type>
+        <parameter-type>com.opensymphony.xwork2.util.ValueStack</parameter-type>
+        <parameter-type>boolean</parameter-type>
+        <parameter-type>com.opensymphony.xwork2.util.TextParseUtil$ParsedValueEvaluator</parameter-type>
+        <parameter-type>int</parameter-type>
+        <return-type>java.util.Collection</return-type>
+        <vulnerable-parameter-index>1</vulnerable-parameter-index>
+    </method>  
+
+    <method owner="org.springframework.expression.common.TemplateAwareExpressionParser" name="parseExpression">
+        <parameter-type>java.lang.String</parameter-type>
+        <return-type>org.springframework.expression.Expression</return-type>
+        <vulnerable-parameter-index>0</vulnerable-parameter-index>
+    </method> 
+    
+    <method owner="org.springframework.expression.common.TemplateAwareExpressionParser" name="parseExpression">
+        <parameter-type>java.lang.String</parameter-type>
+        <parameter-type>org.springframework.expression.ParserContext</parameter-type>
+        <return-type>org.springframework.expression.Expression</return-type>
+        <vulnerable-parameter-index>0</vulnerable-parameter-index>
+    </method> 
+    
+    <method owner="org.springframework.expression.spel.standard.SpelExpressionParser" name="parseRaw">
+        <parameter-type>java.lang.String</parameter-type>
+        <return-type>org.springframework.expression.spel.standard.SpelExpression</return-type>
+        <vulnerable-parameter-index>0</vulnerable-parameter-index>
+    </method> 
+
+    <method owner="org.springframework.expression.ExpressionParser" name="parseExpression">
+        <parameter-type>java.lang.String</parameter-type>
+        <return-type>org.springframework.expression.Expression</return-type>
+        <vulnerable-parameter-index>0</vulnerable-parameter-index>
+    </method> 
+    
+    <method owner="org.springframework.expression.ExpressionParser" name="parseExpression">
+        <parameter-type>java.lang.String</parameter-type>
+        <parameter-type>org.springframework.expression.ParserContext</parameter-type>
+        <return-type>org.springframework.expression.Expression</return-type>
+        <vulnerable-parameter-index>0</vulnerable-parameter-index>
+    </method> 
+
+
+
+    <method owner="javax.xml.parsers.SAXParser" name="parse">
+        <parameter-type>java.io.InputStream</parameter-type>
+        <parameter-type>org.xml.sax.HandlerBase</parameter-type>
+        <return-type>void</return-type>
+        <vulnerable-parameter-index>0</vulnerable-parameter-index>
+    </method>
+    
+    <method owner="javax.xml.parsers.SAXParser" name="parse">
+        <parameter-type>java.io.InputStream</parameter-type>
+        <parameter-type>org.xml.sax.HandlerBase</parameter-type>
+        <parameter-type>java.lang.String</parameter-type>
+        <return-type>void</return-type>
+        <vulnerable-parameter-index>0</vulnerable-parameter-index>
+    </method>
+    
+    <method owner="javax.xml.parsers.SAXParser" name="parse">
+        <parameter-type>java.io.InputStream</parameter-type>
+        <parameter-type>org.xml.sax.helpers.DefaultHandler</parameter-type>
+        <return-type>void</return-type>
+        <vulnerable-parameter-index>0</vulnerable-parameter-index>
+    </method>
+    
+    <method owner="javax.xml.parsers.SAXParser" name="parse">
+        <parameter-type>java.io.InputStream</parameter-type>
+        <parameter-type>org.xml.sax.helpers.DefaultHandler</parameter-type>
+        <parameter-type>java.lang.String</parameter-type>
+        <return-type>void</return-type>
+        <vulnerable-parameter-index>0</vulnerable-parameter-index>
+    </method>
+    
+    <method owner="javax.xml.parsers.SAXParser" name="parse">
+        <parameter-type>java.lang.String</parameter-type>
+        <parameter-type>org.xml.sax.HandlerBase</parameter-type>
+        <return-type>void</return-type>
+        <vulnerable-parameter-index>0</vulnerable-parameter-index>
+    </method>    
+    
+    <method owner="javax.xml.parsers.SAXParser" name="parse">
+        <parameter-type>java.io.File</parameter-type>
+        <parameter-type>org.xml.sax.HandlerBase</parameter-type>
+        <return-type>void</return-type>
+        <vulnerable-parameter-index>0</vulnerable-parameter-index>
+    </method>
+    
+    <method owner="javax.xml.parsers.SAXParser" name="parse">
+        <parameter-type>java.io.File</parameter-type>
+        <parameter-type>org.xml.sax.helpers.DefaultHandler</parameter-type>
+        <return-type>void</return-type>
+        <vulnerable-parameter-index>0</vulnerable-parameter-index>
+    </method>
+    
+    <method owner="javax.xml.parsers.SAXParser" name="parse">
+        <parameter-type>java.lang.String</parameter-type>
+        <parameter-type>org.xml.sax.helpers.DefaultHandler</parameter-type>
+        <return-type>void</return-type>
+        <vulnerable-parameter-index>0</vulnerable-parameter-index>
+    </method>
+    
+    <method owner="javax.xml.parsers.SAXParser" name="parse">
+        <parameter-type>org.xml.sax.InputSource</parameter-type>
+        <parameter-type>org.xml.sax.HandlerBase</parameter-type>
+        <return-type>void</return-type>
+        <vulnerable-parameter-index>0</vulnerable-parameter-index>
+    </method>
+    
+    <method owner="javax.xml.parsers.SAXParser" name="parse">
+        <parameter-type>org.xml.sax.InputSource</parameter-type>
+        <parameter-type>org.xml.sax.helpers.DefaultHandler</parameter-type>
+        <return-type>void</return-type>
+        <vulnerable-parameter-index>0</vulnerable-parameter-index>
+    </method>
+    
+
+
+    <method owner="javax.xml.parsers.DocumentBuilder" name="parse">
+        <parameter-type>java.io.InputStream</parameter-type>
+        <return-type>org.w3c.dom.Document</return-type>
+        <vulnerable-parameter-index>0</vulnerable-parameter-index>
+    </method>
+    
+    <method owner="javax.xml.parsers.DocumentBuilder" name="parse">
+        <parameter-type>java.io.InputStream</parameter-type>
+        <parameter-type>java.lang.String</parameter-type>
+        <return-type>org.w3c.dom.Document</return-type>
+        <vulnerable-parameter-index>0</vulnerable-parameter-index>
+    </method>
+    
+    <method owner="javax.xml.parsers.DocumentBuilder" name="parse">
+        <parameter-type>java.io.InputStream</parameter-type>
+        <return-type>org.w3c.dom.Document</return-type>
+        <vulnerable-parameter-index>0</vulnerable-parameter-index>
+    </method>
+    
+    <method owner="javax.xml.parsers.DocumentBuilder" name="parse">
+        <parameter-type>java.io.File</parameter-type>
+        <return-type>org.w3c.dom.Document</return-type>
+        <vulnerable-parameter-index>0</vulnerable-parameter-index>
+    </method>        
+    
+    <method owner="javax.xml.parsers.DocumentBuilder" name="parse">
+        <parameter-type>org.xml.sax.InputSource</parameter-type>
+        <return-type>org.w3c.dom.Document</return-type>
+        <vulnerable-parameter-index>0</vulnerable-parameter-index>
+    </method>
+    
+    
+    
+    <method owner="javax.xml.xpath.XPath" name="compile">
+        <parameter-type>java.lang.String</parameter-type>
+        <return-type>javax.xml.xpath.XPathExpression</return-type>
+        <vulnerable-parameter-index>0</vulnerable-parameter-index>
+    </method>
+    
+    <method owner="javax.xml.xpath.XPath" name="evaluate">
+        <parameter-type>java.lang.String</parameter-type>
+        <parameter-type>org.xml.sax.InputSource</parameter-type>
+        <return-type>java.lang.String</return-type>
+        <vulnerable-parameter-index>0</vulnerable-parameter-index>
+        <vulnerable-parameter-index>1</vulnerable-parameter-index>
+    </method>  
+    
+    <method owner="javax.xml.xpath.XPath" name="evaluate">
+        <parameter-type>java.lang.String</parameter-type>
+        <parameter-type>org.xml.sax.InputSource</parameter-type>
+        <parameter-type>javax.xml.namespace.QName</parameter-type>
+        <return-type>java.lang.Object</return-type>
+        <vulnerable-parameter-index>0</vulnerable-parameter-index>
+        <vulnerable-parameter-index>1</vulnerable-parameter-index>
+    </method>  
+    
+    <method owner="javax.xml.xpath.XPath" name="evaluate">
+        <parameter-type>java.lang.String</parameter-type>
+        <parameter-type>java.lang.Object</parameter-type>
+        <return-type>java.lang.String</return-type>
+        <vulnerable-parameter-index>0</vulnerable-parameter-index>
+    </method>
+    
+     <method owner="javax.xml.xpath.XPath" name="evaluate">
+        <parameter-type>java.lang.String</parameter-type>
+        <parameter-type>java.lang.Object</parameter-type>
+        <parameter-type>javax.xml.namespace.QName</parameter-type>
+        <return-type>java.lang.Object</return-type>
+        <vulnerable-parameter-index>0</vulnerable-parameter-index>
+    </method>  
+
+    <method owner="org.dom4j.io.SAXReader" constructor="true">
+        <parameter-type>java.lang.String</parameter-type>
+        <return-type>void</return-type>
+        <vulnerable-parameter-index>0</vulnerable-parameter-index>
+    </method>
+
+    <method owner="org.dom4j.io.SAXReader" name="read">
+        <parameter-type>java.io.File</parameter-type>
+        <return-type>org.dom4j.Document</return-type>
+        <vulnerable-parameter-index>0</vulnerable-parameter-index>
+    </method>
+    
+    <method owner="org.dom4j.io.SAXReader" name="read">
+        <parameter-type>java.net.URL</parameter-type>
+        <return-type>org.dom4j.Document</return-type>
+        <vulnerable-parameter-index>0</vulnerable-parameter-index>
+    </method>
+
+    <method owner="org.dom4j.io.SAXReader" name="read">
+        <parameter-type>java.io.Reader</parameter-type>
+        <return-type>org.dom4j.Document</return-type>
+        <vulnerable-parameter-index>0</vulnerable-parameter-index>
+    </method>
+    
+    <method owner="org.dom4j.io.SAXReader" name="read">
+        <parameter-type>java.io.InputStream</parameter-type>
+        <return-type>org.dom4j.Document</return-type>
+        <vulnerable-parameter-index>0</vulnerable-parameter-index>
+    </method>
+
+    <method owner="org.dom4j.io.SAXReader" name="read">
+        <parameter-type>java.io.InputStream</parameter-type>
+        <parameter-type>java.lang.String</parameter-type>
+        <return-type>org.dom4j.Document</return-type>
+        <vulnerable-parameter-index>0</vulnerable-parameter-index>
+    </method>
+
+    <method owner="org.dom4j.io.SAXReader" name="read">
+        <parameter-type>java.io.Reader</parameter-type>
+        <parameter-type>java.lang.String</parameter-type>
+        <return-type>org.dom4j.Document</return-type>
+        <vulnerable-parameter-index>0</vulnerable-parameter-index>
+    </method>
+
+    <method owner="org.dom4j.io.SAXReader" name="read">
+        <parameter-type>org.xml.sax.InputSource</parameter-type>
+        <return-type>org.dom4j.Document</return-type>
+        <vulnerable-parameter-index>0</vulnerable-parameter-index>
+    </method>
+
+
+    <method owner="javassist.compiler.Javac" name="compile">
+        <parameter-type>java.lang.String</parameter-type>
+        <return-type>javassist.CtMember</return-type>
+        <vulnerable-parameter-index>0</vulnerable-parameter-index>
+    </method>
+
+
+<!--
+    <method owner="org.apache.commons.collections.functors.InvokerTransformer" constructor="true">
+        <parameter-type>java.lang.String</parameter-type>
+        <parameter-type>java.lang.Class[]</parameter-type>
+        <parameter-type>java.lang.Object[]</parameter-type>
+        <return-type>void</return-type>
+        <vulnerable-parameter-index>0</vulnerable-parameter-index>
+    </method>
+
+    <method owner="org.apache.commons.collections.map.TransformedMap" name="decorate">
+        <parameter-type>java.util.Map</parameter-type>
+        <parameter-type>org.apache.commons.collections.Transformer</parameter-type>
+        <parameter-type>org.apache.commons.collections.Transformer</parameter-type>
+        <return-type>java.util.Map</return-type>
+        <vulnerable-parameter-index>0</vulnerable-parameter-index>
+    </method>
+
+    <method owner="java.util.Map.Entry" name="setValue">
+        <parameter-type>java.lang.Object</parameter-type>
+        <return-type>java.lang.Object</return-type>
+        <vulnerable-parameter-index>0</vulnerable-parameter-index>
+    </method>
+-->
+
+   <method owner="java.lang.reflect.Proxy" constructor="true">
+        <parameter-type>java.lang.reflect.InvocationHandler</parameter-type>
+        <return-type>void</return-type>
+        <vulnerable-parameter-index>0</vulnerable-parameter-index>
+    </method>
+
+
+    <method owner="java.beans.EventHandler" constructor="true">
+        <parameter-type>java.lang.Object</parameter-type>
+        <parameter-type>java.lang.String</parameter-type>
+        <parameter-type>java.lang.String</parameter-type>
+        <parameter-type>java.lang.String</parameter-type>
+        <return-type>void</return-type>
+        <vulnerable-parameter-index>0</vulnerable-parameter-index>
+        <vulnerable-parameter-index>1</vulnerable-parameter-index>
+        <vulnerable-parameter-index>2</vulnerable-parameter-index>
+        <vulnerable-parameter-index>3</vulnerable-parameter-index>
+    </method>
+    
+    <method owner="javax.management.openmbean.CompositeDataInvocationHandler" constructor="true">
+        <parameter-type>javax.management.openmbean.CompositeData</parameter-type>
+        <return-type>void</return-type>
+        <vulnerable-parameter-index>0</vulnerable-parameter-index>
+    </method>
+    
+    <method owner="javax.management.MBeanServerInvocationHandler" constructor="true">
+        <parameter-type>javax.management.MBeanServerConnection</parameter-type>
+        <parameter-type>javax.management.ObjectName</parameter-type>
+        <return-type>void</return-type>
+        <vulnerable-parameter-index>1</vulnerable-parameter-index>
+    </method>
+    
+    <method owner="javax.management.MBeanServerInvocationHandler" constructor="true">
+        <parameter-type>javax.management.MBeanServerConnection</parameter-type>
+        <parameter-type>javax.management.ObjectName</parameter-type>
+        <parameter-type>boolean</parameter-type>
+        <return-type>void</return-type>
+        <vulnerable-parameter-index>1</vulnerable-parameter-index>
+    </method>
+    
+    <method owner="java.rmi.server.RemoteObjectInvocationHandler" constructor="true">
+        <parameter-type>java.rmi.server.RemoteRef</parameter-type>
+        <return-type>void</return-type>
+        <vulnerable-parameter-index>0</vulnerable-parameter-index>
+    </method>
+    
+    <method owner="com.opensymphony.xwork2.util.ValueStack" name="setValue">
+        <parameter-type>java.lang.String</parameter-type>
+        <parameter-type>java.lang.Object</parameter-type>
+        <return-type>void</return-type>
+        <vulnerable-parameter-index>1</vulnerable-parameter-index>
+    </method>
+
+    <method owner="com.opensymphony.xwork2.util.ValueStack" name="setParameter">
+        <parameter-type>java.lang.String</parameter-type>
+        <parameter-type>java.lang.Object</parameter-type>
+        <return-type>void</return-type>
+        <vulnerable-parameter-index>1</vulnerable-parameter-index>
+    </method>
+    
+    <method owner="com.opensymphony.xwork2.util.ValueStack" name="setValue">
+        <parameter-type>java.lang.String</parameter-type>
+        <parameter-type>java.lang.Object</parameter-type>
+        <parameter-type>boolean</parameter-type>
+        <return-type>void</return-type>
+        <vulnerable-parameter-index>1</vulnerable-parameter-index>
+    </method>    
+
+<!--
+    <method owner="com.opensymphony.xwork2.util.ValueStack" name="findValue">
+        <parameter-type>java.lang.String</parameter-type>
+        <return-type>java.lang.Object</return-type>
+        <vulnerable-parameter-index>0</vulnerable-parameter-index>
+    </method>
+    
+    <method owner="com.opensymphony.xwork2.util.ValueStack" name="findValue">
+        <parameter-type>java.lang.String</parameter-type>
+        <parameter-type>boolean</parameter-type>
+        <return-type>java.lang.Object</return-type>
+        <vulnerable-parameter-index>0</vulnerable-parameter-index>
+    </method>
+    
+    <method owner="com.opensymphony.xwork2.util.ValueStack" name="findValue">
+        <parameter-type>java.lang.String</parameter-type>
+        <parameter-type>java.lang.Class</parameter-type>
+        <return-type>java.lang.Object</return-type>
+        <vulnerable-parameter-index>0</vulnerable-parameter-index>
+    </method>
+    
+    <method owner="com.opensymphony.xwork2.util.ValueStack" name="findValue">
+        <parameter-type>java.lang.String</parameter-type>
+        <parameter-type>java.lang.Class</parameter-type>
+        <parameter-type>boolean</parameter-type>
+        <return-type>java.lang.Object</return-type>
+        <vulnerable-parameter-index>0</vulnerable-parameter-index>
+    </method>
+-->
+
+    <method owner="com.opensymphony.xwork2.util.OgnlTextParser" name="evaluate">
+        <parameter-type>char[]</parameter-type>
+        <parameter-type>java.lang.String</parameter-type>
+        <parameter-type>com.opensymphony.xwork2.util.TextParseUtil$ParsedValueEvaluator</parameter-type>
+        <parameter-type>int</parameter-type>
+        <return-type>java.lang.Object</return-type>
+        <vulnerable-parameter-index>1</vulnerable-parameter-index>
+    </method>
+    
+    
+<!-- come back and add more...
+    <method owner="javax.naming.InitialContext" name="loadLibrary">
+        <parameter-type>java.lang.String</parameter-type>
+        <return-type>void</return-type>
+        <vulnerable-parameter-index>0</vulnerable-parameter-index>
+    </method>
+-->
+</sinks>

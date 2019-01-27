@@ -1,0 +1,22 @@
+<annotations>
+    <annotation>org.springframework.web.bind.annotation.RequestMapping</annotation>
+
+    <annotation>org.springframework.web.bind.annotation.RequestPart</annotation>
+    <annotation>org.springframework.web.bind.annotation.GetMapping</annotation>
+    <annotation>org.springframework.web.bind.annotation.PostMapping</annotation>
+    <annotation>org.springframework.web.bind.annotation.PutMapping</annotation>
+    <annotation>org.springframework.web.bind.annotation.PatchMapping</annotation>
+    <annotation>org.springframework.web.bind.annotation.DeleteMapping</annotation>
+    <annotation>org.springframework.web.bind.annotation.CookieValue</annotation>
+
+    <annotation>org.springframework.web.bind.annotation.ModelAttribute</annotation>
+    
+    <annotation>javax.ws.rs.GET</annotation>
+    <annotation>javax.ws.rs.Produces</annotation>
+    <annotation>javax.ws.rs.Path</annotation>
+    <annotation>javax.ws.rs.POST</annotation>
+    <annotation>javax.ws.rs.Consumes</annotation>
+    <annotation>javax.ws.rs.PUT</annotation>
+    <annotation>javax.ws.rs.DELETE</annotation>
+
+</annotations>

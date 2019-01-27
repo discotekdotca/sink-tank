@@ -1,0 +1,12 @@
+<annotations>
+    <annotation>org.springframework.web.bind.annotation.ResponseBody</annotation>
+    <annotation>org.springframework.web.bind.annotation.ResponseStatus</annotation>
+    
+    <!--
+    <annotation>javax.persistence.Entity</annotation>
+
+    <annotation>javax.xml.bind.annotation.XmlElement</annotation>
+    <annotation>javax.xml.bind.annotation.XmlRootElement</annotation>
+    -->
+
+</annotations>
